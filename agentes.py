@@ -1,5 +1,5 @@
 from crewai import Agent
-from langchain_community.llms import ollama
+from langchain_community.llms.ollama import ollama
 import os
 
 
