@@ -1,12 +1,12 @@
 from crewai import Agent
-from langchain_community.llms.ollama import ollama
+from langchain_community.llms.ollama import Ollama
 import os
 
 
 MODEL_NAME = os.getenv("MODEL_NAME", "mistral")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
-llm = ollama(model=MODEL_NAME, base_url=OLLAMA_BASE_URL)
+llm = Ollama(model=MODEL_NAME, base_url=OLLAMA_BASE_URL)
 
 financas = Agent(
     role="Gestor Financeiro",
